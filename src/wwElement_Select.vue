@@ -457,6 +457,7 @@ export default {
             };
 
             isOpen.value = true;
+            emit('trigger-event', { name: 'dropdownOpen', event: null });
 
             nextTick(() => {
                 // Wait for browser to complete layout calculations

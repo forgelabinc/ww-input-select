@@ -239,6 +239,7 @@ export default {
         { name: 'initValueChange', label: { en: 'On init value change' }, event: { value: '' } },
         { name: 'focus', label: { en: 'On focus' }, event: { value: '' } },
         { name: 'blur', label: { en: 'On blur' }, event: { value: '' } },
+        { name: 'dropdownOpen', label: { en: 'On dropdown open' }, event: null },
         { name: 'dropdownClose', label: { en: 'On dropdown close' }, event: null },
     ],
     actions: [
