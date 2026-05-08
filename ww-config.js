@@ -78,6 +78,7 @@ export default {
                     'triggerShadows',
                     'triggerPadding',
                     'triggerMargin',
+                    'triggerOutline',
                     'triggerIconClose',
                     'triggerIconOpen',
                     'triggerIconSize',
@@ -232,12 +233,13 @@ export default {
         displayAllowedValues: ['block'],
         //ignoredStyleProperties: ['border','borderRadius','background','outline'],
     },
-    states: ['focus', 'readonly'],
+    states: ['focus', 'focus-visible', 'readonly'],
     triggerEvents: [
         { name: 'change', label: { en: 'On change' }, event: { value: '' }, default: true },
         { name: 'initValueChange', label: { en: 'On init value change' }, event: { value: '' } },
         { name: 'focus', label: { en: 'On focus' }, event: { value: '' } },
         { name: 'blur', label: { en: 'On blur' }, event: { value: '' } },
+        { name: 'dropdownClose', label: { en: 'On dropdown close' }, event: null },
     ],
     actions: [
         {
@@ -1896,6 +1898,17 @@ export default {
             bindable: true,
             responsive: true,
             defaultValue: '0px',
+        },
+        triggerOutline: {
+            type: 'Border',
+            label: {
+                en: 'Outline',
+            },
+            states: true,
+            classes: true,
+            bindable: true,
+            responsive: true,
+            defaultValue: undefined,
         },
         triggerIconOpen: {
             label: { en: 'Open icon', fr: 'Icône ouverte' },
