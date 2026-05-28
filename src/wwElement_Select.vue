@@ -470,6 +470,7 @@ export default {
 
         function closeDropdown() {
             if (!shouldCloseDropdown.value) return;
+            if (!isOpen.value) return;
 
             resetSearch();
             resetFocus();
